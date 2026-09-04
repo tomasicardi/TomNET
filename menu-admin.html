@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu administrador - Tienda TomNET</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido-principal">Ir al contenido principal</a>
+
+    <nav class="navbar navbar-expand-md" aria-label="Principal">
+        <div class="container">
+            <span class="navbar-brand fw-bold">TomNET <span class="badge text-bg-light text-dark ms-1">Admin</span></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-admin" aria-controls="nav-admin" aria-expanded="false" aria-label="Abrir menu de navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-admin">
+                <ul class="navbar-nav ms-auto align-items-md-center gap-md-2">
+                    <li class="nav-item"><a class="nav-link" href="productos-admin.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos-crear.html">Registrar producto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ventas.html">Ventas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guia_uso.html">Ayuda</a></li>
+                    <li class="nav-item"><button id="btn-salir" class="btn btn-outline-light btn-sm ms-md-2">Cerrar sesion</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="contenido-principal" class="container py-4">
+        <h1 class="h3">Menu administrador</h1>
+        <p id="usuario-actual" class="text-body-secondary"></p>
+
+        <div class="row g-3 mt-2">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a class="btn btn-secondary w-100 py-3" href="productos-admin.html">Ver catalogo</a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a class="btn btn-secondary w-100 py-3" href="productos-crear.html">Registrar producto</a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a class="btn btn-secondary w-100 py-3" href="ventas.html">Ver ventas</a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a class="btn btn-secondary w-100 py-3" href="guia_uso.html">Ayuda</a>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/paginas/menuAdmin.js"></script>
+</body>
+</html>
