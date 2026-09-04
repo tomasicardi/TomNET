@@ -1,11 +1,9 @@
 # Tienda TomNET
 
 Aplicacion web de e-commerce (celulares y accesorios), hecha para el Taller de
-Integracion de Proyecto Web. Es la evolucion del proyecto que entregue en
+Integracion de Proyecto Web. Es la evolucion del proyecto de
 Programacion 1, con las mejoras que pide la letra del taller.
 
-Demo publicada: agregar el link de GitHub Pages una vez publicado
-(https://usuario.github.io/repositorio/)
 
 ## Funcionalidad
 
@@ -16,7 +14,7 @@ Demo publicada: agregar el link de GitHub Pages una vez publicado
 - Calculo de IVA (basico 22%, minimo 10%, exento) y precio final
 - Panel de administracion: alta de productos (con imagen), stock, baja de productos
 - Historial de ventas
-- Todo se guarda en localStorage (no hay backend)
+- Todo se guarda en localStorage 
 
 ## Estructura del proyecto
 
@@ -38,7 +36,6 @@ js/
   servicios/     -> Storage, Seguridad, ApiCotizacion, y los gestores
   ui/            -> Notificador.js (notificaciones y confirmaciones)
   paginas/       -> un archivo js por cada pantalla
-.github/workflows/deploy.yml   (publica solo en GitHub Pages)
 ```
 
 ## Requisitos del taller que se aplicaron
@@ -56,46 +53,21 @@ js/
   (https://dolarapi.com/docs/uruguay/) para mostrar la cotizacion del dolar.
   Se guarda en localStorage por 30 minutos para no pedirla todo el tiempo.
 - **Seguridad basica**: las contrasenas se guardan como hash SHA-256, no en
-  texto plano. El texto que escribe el usuario se escapa antes de mostrarlo
-  (para evitar XSS). El login se bloquea 30 segundos despues de 5 intentos
-  fallidos.
+  texto plano. El texto que escribe el usuario se escapa antes de mostrarlo.
+  El login se bloquea 30 segundos despues de 5 intentos fallidos.
 - **Accesibilidad**: link para saltar al contenido, foco visible, aria-live en
   las zonas que cambian, alt en las imagenes, notificaciones propias en vez de
   alert()/confirm().
-- **Responsive**: se ve bien en celular gracias a la grilla de Bootstrap y el
-  navbar que se colapsa.
+- **Responsive**
 
-## Como probarlo
-
-No hace falta instalar nada, es HTML/CSS/JS con modulos ES6. Como los modulos
-no cargan bien abriendo el archivo directo (file://), hay que levantar un
-servidor simple:
-
-- VS Code con la extension Live Server, o
-- `npx serve .`, o
-- `python3 -m http.server`
+## Importante / Admin
 
 Para probar el panel de administrador: correo `admin@tienda.com`, contrasena
 `admin1234`.
 
-## Publicar en GitHub Pages
 
-El repositorio ya tiene el workflow en `.github/workflows/deploy.yml`.
+## Para proximas versiones
 
-1. Subir el proyecto a un repositorio de GitHub.
-2. En Settings > Pages > Source, elegir "GitHub Actions".
-3. Al hacer push a main se publica solo.
-4. La URL queda en Settings > Pages.
+- Para una próxima versión, se podria hacer un listado de ventas que genera un documento excel por ejemplo.
 
-## Lo que quedo pendiente
 
-- Exportar el listado de ventas a CSV (queda para mas adelante).
-
-## Equipo
-
-Tomas Icardi
-
-## Fuentes usadas
-
-- Bootstrap 5: https://getbootstrap.com/
-- DolarApi: https://dolarapi.com/
